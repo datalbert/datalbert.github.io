@@ -1,0 +1,29 @@
+---
+title: "Tutoriales"
+layout: default
+permalink: "/tutorials.html"
+---
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="font-weight-bold title h6 text-uppercase mb-2">Tutoriales</h1>
+            <p class="text-muted mb-4">Guías paso a paso sobre infraestructura IT, DevOps, desarrollo backend e Inteligencia Artificial.</p>
+
+            {% assign tutorial_posts = site.posts | where_exp: "post", "post.categories contains 'Tutorial'" %}
+            {% if tutorial_posts.size > 0 %}
+                {% for post in tutorial_posts %}
+                {% include main-loop-card.html %}
+                {% endfor %}
+            {% else %}
+                <div class="alert alert-light text-center py-5">
+                    <p class="text-muted mb-0">Próximamente los primeros tutoriales. ¡Vuelve pronto!</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="col-md-4">
+            {% include sidebar-featured.html %}
+        </div>
+    </div>
+</div>

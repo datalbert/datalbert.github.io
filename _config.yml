@@ -1,6 +1,6 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: 'KernelNotes'
+description: 'Telecomunicaciones, infraestructura IT, DevOps, desarrollo backend e Inteligencia Artificial. El blog de Alberto Ávila.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ''
@@ -23,7 +23,7 @@ authors:
       name:           Alberto
       site:           https://www.wowthemes.net
       avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Alberto Ávila and I'm an telecomunication engineer, this is my blog.I hope you like it!"
+      bio:            "Ingeniero de Telecomunicación por la Universidad de Sevilla y cursando el Máster en la UNIR. Software & Systems Engineer en Indra Sistemas. Apasionado de la infraestructura IT, DevOps y el desarrollo backend."
       email:          albertoaf0520@gmail.com
       linkedin: 
 # Defaults
@@ -34,7 +34,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: alberto
       avatar: /assets/images/avatar1.jpg
       
   # all pages

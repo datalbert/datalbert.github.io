@@ -134,3 +134,31 @@ $(function() {
     }
   }
 });
+// Dark mode toggle
+(function () {
+    var toggle = document.getElementById('dark-mode-toggle');
+    var icon = document.getElementById('dark-mode-icon');
+
+    function applyTheme(dark) {
+        if (dark) {
+            document.body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            toggle.title = 'Cambiar a modo claro';
+        } else {
+            document.body.classList.remove('dark-mode');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            toggle.title = 'Cambiar a modo oscuro';
+        }
+    }
+
+    var saved = localStorage.getItem('darkMode');
+    applyTheme(saved === 'true');
+
+    toggle.addEventListener('click', function () {
+        var isDark = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', !isDark);
+        applyTheme(!isDark);
+    });
+})();
